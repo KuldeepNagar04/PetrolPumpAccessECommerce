@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="@dimen/margin_small">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/cart_img1"
+            android:layout_width="@dimen/icon_size_bigb"
+            android:layout_height="@dimen/icon_size_bigb"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="product_name"
+            android:textSize="@dimen/text_large"
+            android:layout_marginStart="@dimen/text_large"
+            app:layout_constraintStart_toEndOf="@id/cart_img1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5000 INR"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintStart_toEndOf="@id/cart_img1"
+            app:layout_constraintTop_toBottomOf="@id/list_name"/>
+
+
+        <TextView
+            android:id="@+id/remove_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_large"
+            android:background="@drawable/icon_remove"
+            app:layout_constraintStart_toEndOf="@id/cart_img1"
+            app:layout_constraintTop_toBottomOf="@id/item_price"/>
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:inputType="number"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@id/remove_item"
+            app:layout_constraintTop_toBottomOf="@id/item_price"/>
+
+
+        <TextView
+            android:id="@+id/add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_large"
+            android:background="@drawable/icon_add"
+            app:layout_constraintStart_toEndOf="@id/quantity"
+            app:layout_constraintTop_toBottomOf="@id/item_price"/>
+
+        <TextView
+            android:id="@+id/delete_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_large"
+            android:background="@drawable/delete_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_price"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item android:title="Cart"
+        android:id="@+id/menu_cart"
+        android:icon="@drawable/icon_shopping_cart" />
+
+
+    <item android:title="Profile">
+        <menu>
+            <item android:title="My Account"
+                android:icon="@drawable/icon_my_account"
+                android:id="@+id/myAccount"/>
+            <item android:id="@+id/nav_myOrders"
+                android:icon="@drawable/icon_orderlist"
+                android:title="My Orders"/>
+            <item android:id="@+id/nav_myWishlist"
+                android:icon="@drawable/icon_orderlist"
+                android:title="My Wishlist"/>
+            <item android:title="Jinki Home"
+                android:icon="@drawable/icon_star"
+                android:id="@+id/jinkiMyAccount"/>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:title="Customer Support"
+                android:id="@+id/nav_customer_support"/>
+            <item android:title="Terms and Conditions"
+                android:id="@+id/nav_tnc"/>
+            <item android:title="Share"
+                android:id="@+id/nav_share"/>
+            <item android:title="Rate"
+                android:id="@+id/nav_rate"/>
+        </menu>
+    </item>
+</menu>
